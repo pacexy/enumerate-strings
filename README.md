@@ -10,11 +10,5 @@ const strings: string[] = enumerateStrings(options: Options)
 ```typescript
 interface Options {
   length: number
-  max: number
-  min: number
-  meaningful: boolean
-  startsWith: string
-  contain: string
-  endsWith: string
 }
 ```

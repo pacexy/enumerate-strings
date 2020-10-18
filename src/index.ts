@@ -3,6 +3,7 @@ import { getDigitsInBaseN } from './utils'
 
 interface Options {
   length: number
+  // TODO: implement following options
   meaningful?: boolean
   regex?: RegExp
 }
