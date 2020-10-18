@@ -650,6 +650,11 @@ isexe@^2.0.0:
   resolved "https://registry.npm.taobao.org/isexe/download/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
+iso-basic-latin-alphabet@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/iso-basic-latin-alphabet/download/iso-basic-latin-alphabet-1.0.2.tgz#f70c7ecfba05e0ba269c059c4bbd2624c48e4035"
+  integrity sha1-9wx+z7oF4LomnAWcS70mJMSOQDU=
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/js-tokens/download/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
