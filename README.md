@@ -10,5 +10,7 @@ const strings: string[] = enumerateStrings(options: Options)
 ```typescript
 interface Options {
   length: number
+  charset?: string[]
+  regex?: RegExp
 }
 ```

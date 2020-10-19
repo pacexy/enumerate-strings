@@ -1,26 +1,32 @@
 import alphabet from 'iso-basic-latin-alphabet'
+import isRegExp from 'lodash.isregexp'
+
 import { getDigitsInBaseN } from './utils'
 
 interface Options {
   length: number
+  charset?: string[]
+  regex?: RegExp
   // TODO: implement following options
   meaningful?: boolean
-  regex?: RegExp
 }
 
-const letters = alphabet.lowercase
-const base = letters.length
-
 export default function enumerateStrings(options: Options) {
-  const { length } = options
+  const { length, charset = alphabet.lowercase, regex } = options
+  const base = charset.length
+  const total = Math.pow(charset.length, length)
 
-  const total = Math.pow(letters.length, length)
   const strings: string[] = []
-
   for (let curr = 0; curr < total; curr++) {
     const digits = getDigitsInBaseN(curr, base)
     const filledDigits = [...Array(length - digits.length).fill(0), ...digits]
-    strings.push(filledDigits.map((digit) => letters[digit]).join(''))
+    const string = filledDigits.map((digit) => charset[digit]).join('')
+
+    if (isRegExp(regex)) {
+      if (regex!.test(string)) strings.push(string)
+    } else {
+      strings.push(string)
+    }
   }
 
   return strings
