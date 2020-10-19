@@ -5,7 +5,7 @@ import { getDigitsInBaseN } from './utils'
 interface Options {
   length: number
   charset?: string[]
-  filter?: Function
+  filter?: (string: string) => boolean
   // TODO: implement following options
   meaningful?: boolean
 }
