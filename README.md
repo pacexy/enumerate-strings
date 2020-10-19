@@ -11,6 +11,6 @@ const strings: string[] = enumerateStrings(options: Options)
 interface Options {
   length: number
   charset?: string[]
-  regex?: RegExp
+  filter?: Function
 }
 ```
